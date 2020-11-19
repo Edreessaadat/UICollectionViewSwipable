@@ -21,6 +21,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return newimage.imageArray.count
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    
+        print("Hello Kabul")
+    }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
     5
