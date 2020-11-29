@@ -15,7 +15,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         super.viewDidLoad()
         
         
-
+        
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -27,7 +28,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-    5
+    return 3
         
     }
     
@@ -35,10 +36,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageGalleryCollectionViewCell", for: indexPath) as! ImageGalleryCollectionViewCell
         
         cell.imageGallery.image = newimage.imageArray[indexPath.row]
+        cell.imageGallery.clipsToBounds = true
+        cell.imageGallery.layer.cornerRadius = cell.imageGallery.frame.height/2
+        cell.imageGallery.contentMode = .scaleAspectFill
         return cell
     }
 
-    
-    
 }
+
 
